@@ -1,0 +1,29 @@
+// LendInsight — ER Diagram
+// Paste this entire block into https://dbdiagram.io
+// Then export as PNG → save to 00_documentation/ER_Diagram_LendInsight.png
+
+Table customers {
+  customer_id     int           [pk, increment, note: "Unique customer identifier"]
+  person_age      int           [note: "Applicant age in years"]
+  person_income   decimal(12,2) [note: "Annual gross income (USD)"]
+  person_home_ownership varchar(20) [note: "RENT / OWN / MORTGAGE / OTHER"]
+  person_emp_length decimal(5,1) [note: "Employment tenure in years"]
+  cb_default_on_file char(1)    [note: "Y = prior default on credit bureau, N = none"]
+  cred_hist_length int          [note: "Credit history length in years"]
+  income_bracket  varchar(30)   [note: "Derived: Low / Middle / Upper-Middle / High Income"]
+}
+
+Table loans {
+  loan_id             int           [pk, increment, note: "Unique loan identifier"]
+  customer_id         int           [ref: > customers.customer_id, note: "FK to customers"]
+  loan_intent         varchar(30)   [note: "Loan purpose: PERSONAL / EDUCATION / MEDICAL / VENTURE / HOMEIMPROVEMENT / DEBTCONSOLIDATION"]
+  loan_grade          char(1)       [note: "Risk grade A (lowest) to G (highest)"]
+  loan_amnt           decimal(12,2) [note: "Loan amount requested (USD)"]
+  loan_int_rate       decimal(5,2)  [note: "Annual interest rate (%)"]
+  loan_percent_income decimal(6,4)  [note: "DTI proxy: loan_amnt / person_income"]
+  default_flag        tinyint(1)    [note: "0 = Fully Repaid, 1 = Defaulted"]
+  risk_category       varchar(10)   [note: "Derived: LOW / MEDIUM / HIGH"]
+  dti_bracket         varchar(20)   [note: "Derived: Low DTI / Moderate DTI / High DTI / Very High DTI"]
+}
+
+Ref: loans.customer_id > customers.customer_id
