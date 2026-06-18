@@ -1,4 +1,4 @@
-﻿"""
+"""
 LendInsight -- Final Report Generator
 Generates: LendInsight_Final_Report.docx
 """
@@ -164,7 +164,7 @@ def add_chart(filename, width=Inches(5.5)):
 p = doc.add_paragraph()
 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
 p.paragraph_format.space_before = Pt(40)
-run = p.add_run("LENDSIGHT")
+run = p.add_run("LendInsight")
 run.bold = True; run.font.size = Pt(36)
 run.font.color.rgb = DARK_BLUE; run.font.name = "Calibri"
 
