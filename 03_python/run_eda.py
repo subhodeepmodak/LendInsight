@@ -1,6 +1,10 @@
-﻿"""
-LendInsight -- EDA Chart Generator
-Runs all EDA code and saves 10 charts + segmented CSV.
+"""
+Exploratory Data Analysis (EDA) & Visualization Suite for LendInsight
+
+Executes statistical correlation analysis, generates the 10 core business figures,
+and exports the segmented dataset for Power BI reporting.
+
+Author: Subhodeep Modak
 """
 import pandas as pd
 import numpy as np

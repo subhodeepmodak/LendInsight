@@ -1,15 +1,15 @@
-﻿"""
-=============================================================
-LendInsight -- Excel Workbook Generator
-=============================================================
-Generates LendInsight_Analysis.xlsx with 6 formatted sheets:
-  1. README         - Guide to the workbook
-  2. KPI_Summary    - Top-level business metrics
-  3. Default_by_Segment  - Grade x Intent breakdown
-  4. Income_and_Risk     - Income bracket analysis
-  5. Portfolio_View      - Exposure and composition
-  6. Raw_Data            - Full cleaned dataset
-=============================================================
+"""
+Excel Workbook Generator for LendInsight
+
+Generates a formatted analytical workbook (LendInsight_Analysis.xlsx) with 6 sheets:
+- README: Guide to the workbook
+- KPI_Summary: Top-level portfolio metrics
+- Default_by_Segment: Risk grade and loan intent breakdown
+- Income_and_Risk: Borrower income bracket analysis
+- Portfolio_View: Exposure and portfolio composition
+- Raw_Data: Cleaned dataset export
+
+Author: Subhodeep Modak
 """
 
 import pandas as pd

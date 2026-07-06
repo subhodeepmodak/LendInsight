@@ -1,6 +1,10 @@
 """
-LendInsight -- Final Report Generator
-Generates: LendInsight_Final_Report.docx
+Final Report Generator for LendInsight
+
+Compiles analytical findings, KPIs, and EDA visualizations into a structured,
+executive-level Word document (LendInsight_Final_Report.docx).
+
+Author: Subhodeep Modak
 """
 import pandas as pd
 import numpy as np

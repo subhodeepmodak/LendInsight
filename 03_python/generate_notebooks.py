@@ -1,6 +1,10 @@
-﻿"""
-Generates all 3 LendInsight EDA Jupyter notebooks using nbformat.
-Run this once — then open the .ipynb files in Jupyter.
+"""
+Jupyter Notebook Generator for LendInsight
+
+Programmatically generates the 3 EDA and risk segmentation notebooks using nbformat.
+Run once to initialize or reset the .ipynb files in the project workspace.
+
+Author: Subhodeep Modak
 """
 import nbformat as nbf
 import os

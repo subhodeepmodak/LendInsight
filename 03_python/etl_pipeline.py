@@ -1,14 +1,11 @@
 """
-=============================================================
-LendInsight -- ETL Pipeline
-=============================================================
-Project      : LendInsight Lending Business Decision Support System
-Author       : [Your Name]
-Description  : Extracts raw loan data, transforms and cleans it,
-               creates derived business columns, and loads the
-               result into SQL Server Express and a cleaned CSV.
-Database     : SQL Server Express (Windows Authentication)
-=============================================================
+ETL Pipeline for LendInsight
+
+Extracts raw credit risk dataset, performs data cleaning, median imputation,
+and feature engineering (creating risk segments and DTI brackets). Finally,
+loads the processed tables into SQL Server Express and exports cleaned CSVs.
+
+Author: Subhodeep Modak
 """
 
 import pandas as pd

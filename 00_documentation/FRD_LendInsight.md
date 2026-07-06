@@ -7,7 +7,7 @@
 |-------|--------|
 | **Document Title** | Functional Requirements Document |
 | **Project Name** | LendInsight — Lending Business Decision Support System |
-| **Prepared By** | [Your Name] |
+| **Prepared By** | Subhodeep Modak |
 | **Role** | Business / Data Analyst |
 | **Version** | 1.0 |
 | **Date** | June 2025 |
